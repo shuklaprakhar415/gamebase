@@ -4,53 +4,140 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Gamebase-An online gaming website</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
+
+
+
+
+        
     </head>
         <body>
-           <a href="https://games.cdn.famobi.com/html5games/z/zoo-boom/v1290/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=5e772ebe-9e0a-4cd3-adcf-bba662f35535&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=688&original_ref=https%3A%2F%2Fhtml5games.com%2F" >
-            <img  src="C:\Users\rashi\OneDrive\Desktop\WOC\thumbnails\ZooBoomTeaser.jpg" height="200px" height="200px">
-           </a>
-           <a href="" >
-            <img src="C:\Users\rashi\OneDrive\Desktop\WOC\thumbnails\TotemiaCursedMarblesTeaser.jpg"height="200px" height="200px">
-           </a> 
-            <img  src="C:\Users\rashi\OneDrive\Desktop\WOC\thumbnails\TableTennis_WorldTour_Teaser.jpg" height="200px" height="200px">
-           </a>
-           <a href="" >
-            <img  src="C:\Users\rashi\OneDrive\Desktop\WOC\thumbnails\SolitaireKlondikeTeaser.jpg" height="200px" height="200px">
-           </a>
-            <a href="" >
-                <img  src="C:\Users\rashi\OneDrive\Desktop\WOC\thumbnails\PirateCardsTeaser.jpg" height="200px" height="200px">
-            </a>
-            <a href="" >
-                <img  src="C:\Users\rashi\OneDrive\Desktop\WOC\thumbnails\PerfectPiano_Teaser.jpg" height="200px" height="200px">
-            </a>
-            <a href="" >
-                <img  src="C:\Users\rashi\OneDrive\Desktop\WOC\thumbnails\MotoX3mPoolPartyTeaser.jpg" height="200px" height="200px">
-            </a>
-            <a href="" >
-                <img  src="C:\Users\rashi\OneDrive\Desktop\WOC\thumbnails\GinRummyPlusTeaser.jpg" height="200px" height="200px">
-            </a>
-            <a href="" >
-                <img  src="C:\Users\rashi\OneDrive\Desktop\WOC\thumbnails\ElementBlocksTeaser.jpg" height="200px" height="200px">
-            </a>
-            <a href="" >
-                <img  src="C:\Users\rashi\OneDrive\Desktop\WOC\thumbnails\DiamondRushTeaser.jpg" height="200px" height="200px">
-            </a>
-            <a href="" >
-                <img  src="C:\Users\rashi\OneDrive\Desktop\WOC\thumbnails\ColorPixelArtClassicTeaser.jpg" height="200px" height="200px">
-            </a>
-            <a href="" >
-                <img  src="C:\Users\rashi\OneDrive\Desktop\WOC\thumbnails\BubbleWoodsTeaser.jpg" height="200px" height="200px">
-            </a>
-            <a href="" >
-                <img  src="C:\Users\rashi\OneDrive\Desktop\WOC\thumbnails\ArcheryWorldTourTeaser.jpg" height="200px" height="200px">
-            </a>
-            <a href="" >
-                <img  src="C:\Users\rashi\OneDrive\Desktop\WOC\thumbnails\8BallBilliardsClassicTeaser.jpg" height="200px" height="200px">
-            </a>
-            <a href="" >
-                <img  src="C:\Users\rashi\OneDrive\Desktop\WOC\thumbnails\3dFreeKickTeaser.jpg" height="200px" height="200px">
-            </a>
-           
+          <script src="main.js"></script>
+          
+         
+
+            <div class="Top" >
+                <h1>Gamebase</h1>
+            </div>
+            
+                
+
+                      <div class="dropdown">
+                       <p>
+                         <button onclick="myFunction()" class="dropbtn">Click to search games </button>
+                       </p> 
+                            <div id="myDropdown" class="dropdown-content">
+
+
+                                <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">   
+                                <a href="https://games.cdn.famobi.com/html5games/e/element-blocks/v160/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=8c70b6c7-5792-4c40-b891-496eef2fb5ed&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=534&original_ref=https%3A%2F%2Fhtml5games.com%2F">Element Blocks</a>
+                                <a href="https://games.cdn.famobi.com/html5games/p/pirate-cards/v270/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=7ba3cf66-f926-40dc-ba0e-6b1d7204d1b4&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=534&original_ref=https%3A%2F%2Fhtml5games.com%2F">Pirate Cards</a>
+                
+                                <a href="https://games.cdn.famobi.com/html5games/z/zoo-boom/v1370/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=5e772ebe-9e0a-4cd3-adcf-bba662f35535&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=535&original_ref=https%3A%2F%2Fhtml5games.com%2F">Zoo Boom</a>
+                                <a href="https://html5games.com/Game/Moto-X3M-Pool-Party/b2102250-eb51-4704-9cab-ff296491cc68">Moto X3M Pool Party </a>
+                
+                                <a href="https://html5games.com/Game/Perfect-Piano/24f835e0-d21a-47e1-a721-9f68beed83f3">Perfect Piano</a>
+                                <a href="https://html5games.com/Game/Bubble-Woods/53159388-d515-45e5-b65a-56d21c595405">Bubble Woods</a>
+                                <a href="https://games.cdn.famobi.com/html5games/0/3d-free-kick/v080/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=2ee096ab-4cd7-4f9a-baa9-f58a54413c47&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=537&original_ref=https%3A%2F%2Fhtml5games.com%2F">3D Free Kick</a>
+                                <a href="https://games.cdn.famobi.com/html5games/a/archery-world-tour/v460/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=ebcb987a-3fd0-4b4a-bae6-f456fff9cac3&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=631&original_ref=https%3A%2F%2Fhtml5games.com%2F">Archery World Tour</a>
+                                <a href="https://games.cdn.famobi.com/html5games/s/solitaire-klondike/v480/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=5b597140-77c2-4f7c-9abf-4f149d6dcbac&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=635&original_ref=https%3A%2F%2Fhtml5games.com%2F">Solitaire Klondike</a>
+                                <a href="#">Cindy</a>
+
+
+                            </div>
+                      </div>
+                        
+                        
+                          
+
+
+                      
+   
+  <!-- category games -->
+                            
+  <section class="main text-center">
+    <div class="container">
+      
+      
+      <ul class="list-unstyled row">
+        <li class="col-md active" data-class="all">ALL</li>
+        <li class="col-md" data-class="arcade">ARCADE</li>
+        <li class="col-md" data-class="casual">CASUAL</li>
+      </ul>
+    </div>
+    <div class="container-fluid ">
+      <div class="col-md-3 images" data-class="arcade">
+        <a href="https://games.cdn.famobi.com/html5games/p/pirate-cards/v270/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=7ba3cf66-f926-40dc-ba0e-6b1d7204d1b4&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=236&original_ref=https%3A%2F%2Fhtml5games.com%2F" >
+          <img  src="https://img.cdn.famobi.com/portal/html5games/images/tmp/PirateCardsTeaser.jpg?v=0.2-beeb681b" width="194px" height="194px">
+        </a>
+      </div>
+      <div class="col-md-3 images" data-class="casual">
+        <a href="https://games.cdn.famobi.com/html5games/z/zoo-boom/v1370/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=5e772ebe-9e0a-4cd3-adcf-bba662f35535&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=237&original_ref=https%3A%2F%2Fhtml5games.com%2F" >
+          <img  src="https://img.cdn.famobi.com/portal/html5games/images/tmp/ZooBoomTeaser.jpg?v=0.2-beeb681b" width="100px" height="200px">
+        </a>
+      </div>
+      <div class="col-md-3 images" data-class="casual">
+        <a href="https://games.cdn.famobi.com/html5games/0/3d-free-kick/v080/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=2ee096ab-4cd7-4f9a-baa9-f58a54413c47&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=236&original_ref=https%3A%2F%2Fhtml5games.com%2F" >
+          <img  src="https://img.cdn.famobi.com/portal/html5games/images/tmp/3dFreeKickTeaser.jpg?v=0.2-beeb681b" width="100px" height="200px">
+        </a>
+      </div>
+
+     
+    </div>
+  </section>
+    <script>
+
+const listItems = document.querySelectorAll('.main li');
+const allimages = document.querySelectorAll('.main .container-fluid .images');
+ 
+function toggleActiveClass(active){
+    listItems.forEach(item => {
+      item.classList.remove('active');
+    })
+    active.classList.add('active');
+}
+ 
+function toggleimages(dataClass){
+    if(dataClass === 'all'){
+        for(let i = 0; i<allimages.length; i++){
+            allimages[i].style.display = 'block';
+        }
+    }else{
+        for(let i = 0; i<allimages.length; i++)
+            allimages[i].dataset.class === dataClass ? allimages[i].style.display = 'block' : allimages[i].style.display = 'none';
+    }
+}
+ 
+for(let i = 0; i < listItems.length; i++){
+    listItems[i].addEventListener('click', function(){
+        toggleActiveClass(listItems[i]);
+        toggleimages(listItems[i].dataset.class);
+    });
+}
+    </script>
+
+     
+   
+      
+  
+  
+
+  
+
+  
+                 
+
+
+            
+
+
+
+
+     
+
+
+
 
         </body>
     
