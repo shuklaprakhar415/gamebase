@@ -39,8 +39,25 @@ body{
             
             
           }
+          .addgame {
+            
+            background-color: red;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            
+            
+          }
+
+
+
           
           .dropbtn:hover, .dropbtn:focus {
+            background-color: darkred;
+          }
+          .addgame:hover, .addgame:focus {
             background-color: darkred;
           }
           

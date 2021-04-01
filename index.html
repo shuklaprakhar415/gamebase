@@ -6,7 +6,9 @@
         <title>Gamebase-An online gaming website</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
-        
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
 
 
 
@@ -14,18 +16,21 @@
     </head>
         <body>
           <script src="main.js"></script>
+          <script src="fireBase.js"></script>
+          <script src="Log_in.js"></script>
+          <script src="newgames.js"></script>
           
          
 
             <div class="Top" >
                 <h1>Gamebase</h1>
             </div>
-            
                 
 <div class="whole">
                       <div class="dropdown">
                        <p>
                          <button onclick="myFunction()" class="dropbtn">Click to search games </button>
+                         <button onclick="Addgames()" class="addgame">Click to add games </button>
                        </p> 
                             <div id="myDropdown" class="dropdown-content">
 
@@ -71,10 +76,15 @@
         <li class="col-md" data-class="puzzle">PUZZLE</li>
         <li class="col-md" data-class="racing">RACING</li>
         <li class="col-md" data-class="cards">CARDS</li>
+        <li class="col-md" data-class="added_games">Added Games</li>
       </ul>
     </div>
     <div class="container-fluid ">
       
+
+
+
+
       <div class="col-md-3 images" data-class="puzzle">
         <a href="https://games.cdn.famobi.com/html5games/b/brain-trainer/v430/?fg_domain=play.famobi.com&fg_aid=A1000-1&fg_uid=d267b353-ff18-4745-89f6-c390716a4f25&fg_pid=4638e320-4444-4514-81c4-d80a8c662371&fg_beat=685&original_ref=https%3A%2F%2Fhtml5games.com%2F" >
           <img  src="https://img.cdn.famobi.com/portal/html5games/images/tmp/BrainTrainerTeaser.jpg?v=0.2-beeb681b" width="100px" height="200px">
@@ -181,45 +191,56 @@
       </div>
 
 
+
+
+
+
+      <div class="col-md-3 images" data-class="added_games" id="added_games">
+        <a id="game_url"><img id="img_src" ></a>
+      </div>
+
+
+
+
      
     </div>
   </section>
 </div>  
-    <script>
+      <script>
 
-const listItems = document.querySelectorAll('.main li');
-const allimages = document.querySelectorAll('.main .container-fluid .images');
- 
-function toggleActiveClass(active){
-    listItems.forEach(item => {
-      item.classList.remove('active');
-    })
-    active.classList.add('active');
-}
- 
-function toggleimages(dataClass){
-    if(dataClass === 'all'){
-        for(let i = 0; i<allimages.length; i++){
-            allimages[i].style.display = 'block';
-        }
-    }else{
-        for(let i = 0; i<allimages.length; i++)
-            allimages[i].dataset.class === dataClass ? allimages[i].style.display = 'block' : allimages[i].style.display = 'none';
+    const listItems = document.querySelectorAll('.main li');
+    const allimages = document.querySelectorAll('.main .container-fluid .images');
+    
+    function toggleActiveClass(active){
+        listItems.forEach(item => {
+          item.classList.remove('active');
+        })
+        active.classList.add('active');
     }
-}
- 
-for(let i = 0; i < listItems.length; i++){
-    listItems[i].addEventListener('click', function(){
-        toggleActiveClass(listItems[i]);
-        toggleimages(listItems[i].dataset.class);
-    });
-}
+    
+    function toggleimages(dataClass){
+        if(dataClass === 'all'){
+            for(let i = 0; i<allimages.length; i++){
+                allimages[i].style.display = 'block';
+            }
+        }else{
+            for(let i = 0; i<allimages.length; i++)
+                allimages[i].dataset.class === dataClass ? allimages[i].style.display = 'block' : allimages[i].style.display = 'none';
+        }
+    }
+    
+    for(let i = 0; i < listItems.length; i++){
+        listItems[i].addEventListener('click', function(){
+            toggleActiveClass(listItems[i]);
+            toggleimages(listItems[i].dataset.class);
+        });
+      }
     </script>
 
-     
+    
    
       
-  
+
   
 
   
@@ -239,5 +260,4 @@ for(let i = 0; i < listItems.length; i++){
 
 
         </body>
-    
 </html>

@@ -1,4 +1,7 @@
-
+ function Addgames()
+ {
+   window.open("addgame.html")
+ }
                           /* script for search bar */
 
                          
@@ -32,10 +35,7 @@
 
 
 
-
-
-
-
+                                                  
 
 
 
