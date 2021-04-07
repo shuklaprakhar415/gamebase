@@ -31,6 +31,7 @@
                        <p>
                          <button onclick="myFunction()" class="dropbtn">Click to search games </button>
                          <button onclick="Addgames()" class="addgame">Click to add games </button>
+                         <button onclick="logout()" class="addgame">Click to Logout </button>
                        </p> 
                             <div id="myDropdown" class="dropdown-content">
 
@@ -76,7 +77,7 @@
         <li class="col-md" data-class="puzzle">PUZZLE</li>
         <li class="col-md" data-class="racing">RACING</li>
         <li class="col-md" data-class="cards">CARDS</li>
-        <li class="col-md" data-class="added_games">Added Games</li>
+        
       </ul>
     </div>
     <div class="container-fluid ">
@@ -195,10 +196,7 @@
 
 
 
-      <div class="col-md-3 images" data-class="added_games" id="added_games">
-        <a id="game_url"><img id="img_src" ></a>
-      </div>
-
+ 
 
 
 
@@ -206,6 +204,7 @@
     </div>
   </section>
 </div>  
+   
       <script>
 
     const listItems = document.querySelectorAll('.main li');

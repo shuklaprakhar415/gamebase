@@ -17,10 +17,13 @@ var firebaseConfig = {
   snapshot.forEach(function(userSnapshot)
   {
   console.log(userSnapshot.val().game_url)
-  document.getElementById('img_src').src = userSnapshot.val().game_img_src;
+  document.getElementById("game_url").href = userSnapshot.val().game_url;
+  
+  document.getElementById("img_src").src = userSnapshot.val().game_img_src;
   //document.getElementsById('gamename').innerHTML = userSnapshot.val().game_name;
-  document.getElementById('game_url').href = userSnapshot.val().game_url;
  
+  
+  
   
   });
 });

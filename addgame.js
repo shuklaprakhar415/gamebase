@@ -64,13 +64,22 @@ return document.getElementById(id).value;
 
 
 
-//.........................................
-/* const list_div = document.querySelector("#list_div");
+var reference = firebase.database().ref('Collected Data');
+reference.on('value', function(snapshot)
+ {
+snapshot.forEach(function(userSnapshot)
+{
+  var gameurl=userSnapshot.val().game_url;
+  var imgsrc=userSnapshot.val().game_img_src;
+  var gamename=userSnapshot.val().game_name;
+console.log(userSnapshot.val().game_url)
+document.getElementById("game_url").href = gameurl;
 
-db.collection("Collected Data").onSnapshot(function(querySnapshot) {
-  querySnapshot.forEach(function(doc)  {
-      
-      list_div.innerHTML += "<div class='list-item'><h3>" +doc.data().game_name + "</h3><p>" + doc.data().game_url + "</p></div>"
+document.getElementById("img_src").src = imgsrc;
 
-  });
-}); */
+
+
+
+
+});
+});
