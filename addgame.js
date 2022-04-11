@@ -65,21 +65,17 @@ return document.getElementById(id).value;
 
 
 var reference = firebase.database().ref('Collected Data');
-reference.on('value', function(snapshot)
- {
-snapshot.forEach(function(userSnapshot)
-{
-  var gameurl=userSnapshot.val().game_url;
-  var imgsrc=userSnapshot.val().game_img_src;
-  var gamename=userSnapshot.val().game_name;
-console.log(userSnapshot.val().game_url)
-document.getElementById("game_url").href = gameurl;
-
-document.getElementById("img_src").src = imgsrc;
-
-
-
-
-
-});
+reference.on('value', function (snapshot) {
+  snapshot.forEach(function (userSnapshot) {
+    var gameurl = userSnapshot.val().game_url;
+    var imgsrc = userSnapshot.val().game_img_src;
+    var gamename = userSnapshot.val().game_name;
+    const linkElement = document.createElement('a');
+    const imgElement = document.createElement('img');
+    linkElement.setAttribute('href', gameurl);
+    imgElement.setAttribute('src', imgsrc);
+    imgElement.setAttribute('href', gamename);
+    linkElement.appendChild(imgElement);
+    gameDiv.appendChild(linkElement);
+  });
 });
